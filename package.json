@@ -2,13 +2,18 @@
   "name": "screengrabber",
   "version": "1.0.0",
   "description": "A simple utility to make periodic screenshots. Automatically.",
-  "main": "arc/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "src/index.js",
   "author": "Rajesh Naroth",
   "license": "ISC",
   "dependencies": {
     "ramda": "^0.25.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "jest --watch"
+  },
+  "devDependencies": {
+    "jest": "^22.4.2",
+    "nodemon": "^1.17.1"
   }
 }
