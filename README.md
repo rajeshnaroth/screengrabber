@@ -13,3 +13,5 @@ You can provide commandline arguments
 -p - period in minutes
 -f - format jpg|png
 -n - file name prefix
+
+Next step: Convert this into an electron app.
