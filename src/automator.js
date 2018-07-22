@@ -1,9 +1,9 @@
 function kickoff({ interval, period, captureFunction, isCancelled }) {
   let timeLeft = period
-  let fileNumber = 1
+  let callCount = 1
   const intervalId = setInterval(() => {
-    captureFunction(`${fileNumber}`)
-    fileNumber++
+    captureFunction(callCount)
+    callCount++
     timeLeft -= interval
     if (isCancelled() || timeLeft <= 0) {
       clearInterval(intervalId)
@@ -22,4 +22,4 @@ const getAutomator = function({ interval, period }) {
   }
 }
 
-module.exports = getAutomator
+module.exports = { getAutomator }

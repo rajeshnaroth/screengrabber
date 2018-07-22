@@ -6,7 +6,7 @@ const defaultConfig = {
 }
 
 function parseArgs(argv) {
-  const trimmedArgV = argv.split(/[ ]+/).slice(2)
+  const trimmedArgV = argv.slice(2)
   let defaults = Object.create(defaultConfig)
 
   trimmedArgV.forEach((val, i, arr) => {
@@ -14,6 +14,9 @@ function parseArgs(argv) {
       defaults.interval = parseInt(arr[i + 1])
     } else if (val === "-p") {
       defaults.period = parseInt(arr[i + 1]) * 60
+    } else if (val === "-ps") {
+      // in seconds
+      defaults.period = parseInt(arr[i + 1])
     } else if (val === "-f") {
       defaults.format = arr[i + 1]
     } else if (val === "-n") {
